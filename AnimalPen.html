@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybertext Adventure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .links {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Animal Pen</h1>
+        <div id="animal-pen">
+            <p>There has been a murder on the lose tormenting Jamala. We need to stop them. I am a magic pig, if you tell me who the murder is I may be able to do something, but since I am only a pig I cant find the name myself. please find the name and bring it to me.</p>
+            <input type="text" id="murderer-input" placeholder="Type the name here">
+            <button id="submit-button">Submit</button>
+            <p id="response-message" class="message"></p>
+        </div>
+        <ul>
+            <h2>Rooms To Explore</h2>
+            <li><a href="AnimalPenRoom1.html">Room 1</a></li>
+            <li><a href="AnimalPenRoom2.html">Room 2</a></li>
+            <h2>Buildings to Explore</h2>
+            <li><a href="AnimalPen.html">Animal Pen</a></li>
+            <li><a href="ArmorerHouse.html">Armorer House</a></li>
+            <li><a href="BigHouse.html">Big House</a></li>
+            <li><a href="ButcherShop.html">Butcher Shop</a></li>
+            <li><a href="FishermanHouse.html">Fisherman House</a></li>
+            <li><a href="Library.html">Library</a></li>
+            <li><a href="SheperdsHouse.html">Sheperd's House</a></li>
+            <li><a href="WeaponsmithHouse.html">Weaponsmith House</a></li>
+            <li><a href="Temple.html">Temple</a></li>
+
+
+
+
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function() {
+            const input = document.getElementById('murderer-input').value.trim().toUpperCase();
+            const responseMessage = document.getElementById('response-message');
+            
+            if (input === 'AMY') {
+                responseMessage.textContent = 'Thank you for telling me. You have completed your quest.';
+            } else {
+                responseMessage.textContent = "The gods don't agree with you. Maybe keep exploring?";
+            }
+        });
+    </script>
+</body>
+</html>
